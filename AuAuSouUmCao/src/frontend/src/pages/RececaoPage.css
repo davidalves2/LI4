@@ -1,0 +1,255 @@
+.rececao-page {
+  background-color: #E0E0E0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Tabs Navigation */
+.tabs-bar {
+  display: flex;
+  background-color: #DDDDDD;
+  height: 50px;
+  border-bottom: 1px solid #AAAAAA;
+}
+
+.tab-btn {
+  flex: 1;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  color: #1A1A1A;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.tab-btn.active {
+  background-color: #BBBBBB;
+  font-weight: bold;
+  border-radius: 20px;
+  margin: 5px;
+  height: 40px;
+}
+
+.tab-separator {
+  width: 1px;
+  height: 100%;
+  background-color: #AAAAAA;
+}
+
+/* Layout Principal */
+.rececao-content {
+  display: flex;
+  padding: 25px;
+  gap: 20px;
+}
+
+/* Coluna Filtros */
+.filters-col {
+  width: 110px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.filter-label { font-weight: bold; font-size: 18px; }
+.btn-filter {
+  background-color: #BBBBBB;
+  border-radius: 8px;
+  border: none;
+  padding: 8px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* Card Branco */
+.rececao-card {
+  background: #FFFFFF;
+  border-radius: 16px;
+  padding: 25px 30px;
+  flex: 1;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.rececao-card h2 { font-size: 22px; margin-bottom: 20px; font-weight: normal; }
+
+/* Tabela Estilizada */
+.rececao-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.rececao-table th, .rececao-table td {
+  border: 1px solid #DDDDDD;
+  padding: 12px;
+  text-align: center;
+  font-size: 15px;
+}
+
+.rececao-table th { background-color: #FFFFFF; font-weight: normal; }
+
+/* Botões S/N e Pagar */
+.btn-s { background-color: #2ECC71; color: white; border-radius: 20px; width: 45px; height: 30px; border: none; font-weight: bold; cursor: pointer; }
+.btn-n { background-color: #E74C3C; color: white; border-radius: 20px; width: 45px; height: 30px; border: none; font-weight: bold; cursor: pointer; }
+.btn-pagar { background-color: #00FF00; color: #1A1A1A; border-radius: 20px; padding: 10px 30px; border: none; font-weight: bold; cursor: pointer; }
+
+/* Faturação Sub-page */
+.billing-bar {
+  background-color: #BBBBBB;
+  border-radius: 20px;
+  width: fit-content;
+  padding: 10px 40px;
+  margin: 20px auto;
+  font-weight: bold;
+}
+
+/* MODAL OVERLAY */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-plano-vacinal {
+  background: white;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  max-width: 500px;
+  width: 90%;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.modal-plano-vacinal h3 {
+  margin: 0 0 20px 0;
+  font-size: 20px;
+  color: #1a1a1a;
+  text-align: center;
+  font-weight: 600;
+}
+
+.modal-content {
+  margin-bottom: 20px;
+}
+
+.modal-section {
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.modal-section p {
+  margin: 8px 0;
+  font-size: 14px;
+  color: #555;
+}
+
+.modal-section p strong {
+  color: #1a1a1a;
+}
+
+.modal-form-group {
+  margin-bottom: 20px;
+}
+
+.modal-form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #1a1a1a;
+  font-size: 14px;
+}
+
+.modal-form-group input[type="date"],
+.modal-form-group input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.modal-form-group input[type="date"]:focus,
+.modal-form-group input[type="text"]:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 2px rgba(102, 126, 234, 0.1);
+}
+
+.modal-form-group input[type="checkbox"] {
+  margin-right: 8px;
+  cursor: pointer;
+}
+
+.modal-form-group label input[type="checkbox"] {
+  display: inline;
+  width: auto;
+  margin-bottom: 0;
+}
+
+.modal-link {
+  display: inline-block;
+  color: #667eea;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 10px 15px;
+  border: 1px solid #667eea;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.modal-link:hover {
+  background-color: #667eea;
+  color: white;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  margin-top: 25px;
+}
+
+.btn-cancelar-modal,
+.btn-confirmar-modal {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-cancelar-modal {
+  background-color: #e8e8e8;
+  color: #1a1a1a;
+}
+
+.btn-cancelar-modal:hover {
+  background-color: #d0d0d0;
+}
+
+.btn-confirmar-modal {
+  background-color: #2ecc71;
+  color: white;
+}
+
+.btn-confirmar-modal:hover {
+  background-color: #27ae60;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(46, 204, 113, 0.3);
+}
